@@ -1,6 +1,7 @@
 package be.cheops.exercise.domain;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.MappedSuperclass;
 import java.time.LocalDate;
 
 import static java.time.LocalDate.now;
@@ -8,7 +9,6 @@ import static java.time.LocalDate.now;
 @MappedSuperclass
 public class AbstractEntity {
 
-    @Id
     @GeneratedValue
     Long id;
 
@@ -28,12 +28,10 @@ public class AbstractEntity {
         return lastUpdatedOn;
     }
 
-    @PrePersist
     public void setCreatedOn() {
         this.createdOn = now();
     }
 
-    @PreUpdate
     public void setLastUpdatedOn() {
         this.lastUpdatedOn = now();
     }

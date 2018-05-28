@@ -4,14 +4,10 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import static be.cheops.exercise.domain.Employee.Builder.anEmployee;
-import static java.time.LocalDate.now;
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
-import static org.apache.commons.lang3.StringUtils.isNotBlank;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EmployeeTest {
@@ -30,8 +26,7 @@ public class EmployeeTest {
 
     @Test
     public void sortEmployeesByDateInServiceDescendingAndLastAndFirstNameAscending() {
-        // TODO: Implement code to enable sorting of Employees
-        Collections.sort(employees);
+        //Collections.sort(employees); // TODO: Uncomment and implement where required
 
         assertThat(employees).containsExactly(
                 jefDesmedt, lucDesmedt, kennyDesmedt, jeroenGoossens, steveSchols, johnDoe, kristelHeyns, alainVanDenBossche
@@ -41,10 +36,7 @@ public class EmployeeTest {
     @Test
     public void filterEmployeesWithLastNameEndingOn_S() {
         // TODO: filter the list
-        List<Employee> filteredList = employees.stream()
-                .filter(employee -> isNotBlank(employee.getLastName()))
-                .filter(employee -> employee.getLastName().toLowerCase().endsWith("s"))
-                .collect(toList());
+        List<Employee> filteredList = employees;
 
         assertThat(filteredList).containsExactlyInAnyOrder(
                 jeroenGoossens, steveSchols, kristelHeyns
@@ -54,12 +46,7 @@ public class EmployeeTest {
     @Test
     public void filterEmployeesWorkingLessThan4YearsSortedByLastAndFirstNameDescending() {
         // TODO: filter the list
-        List<Employee> filteredList = employees.stream()
-                .filter(employee -> now().minusYears(4).isBefore(employee.getDateInService()))
-                .sorted(Comparator.comparing(Person::getLastName)
-                        .thenComparing(Person::getFirstName)
-                        .reversed())
-                .collect(toList());
+        List<Employee> filteredList = employees;
 
         assertThat(filteredList).containsExactly(
                 lucDesmedt, jefDesmedt

@@ -1,8 +1,6 @@
 package be.cheops.exercise.dao;
 
 import be.cheops.exercise.domain.Employee;
-import be.cheops.exercise.domain.MaritalStatus;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-// TODO Fix tests by modifying the implementation classes --> Tip: Entity lifecycle
+// TODO: Fix tests --> Tip: Entity lifecycle
 public class JpaEmployeeDaoImplTest {
 
     @Autowired
