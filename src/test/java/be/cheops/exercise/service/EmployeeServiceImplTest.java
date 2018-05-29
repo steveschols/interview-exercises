@@ -26,13 +26,13 @@ public class EmployeeServiceImplTest extends TestData {
     }
 
     @Test
-    public void findEmployeesWorkingLessThan4YearsSortedByLastAndFirstNameDescending() {
+    public void findEmployeesWorkingLessThan4YearsSortedByLastAndFirstNameAscending() {
         // TODO: Implement the service method using Jva 8 Stream API.
         List<Employee> filteredList =
-                employeeService.findEmployeesWorkingLessThan4YearsSortedByLastAndFirstNameDescending(employees);
+                employeeService.findEmployeesWorkingLessThan4YearsSortedByLastAndFirstNameAscending(employees);
 
         assertThat(filteredList).containsExactly(
-                lucDesmedt, jefDesmedt
+                jefDesmedt, lucDesmedt
         );
     }
 

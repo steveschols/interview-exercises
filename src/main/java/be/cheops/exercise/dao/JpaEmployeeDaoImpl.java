@@ -21,9 +21,4 @@ public class JpaEmployeeDaoImpl implements EmployeeDao {
         return entityManager.merge(employee);
     }
 
-    @Override
-    public Employee findEmployee(Long id) {
-        return entityManager.find(Employee.class, id);
-    }
-
 }
