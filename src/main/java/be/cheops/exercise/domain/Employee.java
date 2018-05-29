@@ -7,7 +7,6 @@ import java.time.LocalDate;
 @Entity
 public class Employee extends Person {
 
-    @Column(nullable = false)
     private LocalDate dateInService;
 
     private LocalDate dateOufOfService;
