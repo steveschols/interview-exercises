@@ -11,8 +11,7 @@ public class EmployeeTest extends TestData {
 
     @Test
     public void sortEmployeesByDateInServiceDescendingAndLastAndFirstNameAscending() {
-        // TODO: Implement code to enable sorting of Employees
-        Collections.sort(employees);
+        Collections.sort(employees); // TODO: Uncomment and implement where required
 
         assertThat(employees).containsExactly(
                 jefDesmedt, lucDesmedt, kennyDesmedt, jeroenGoossens, steveSchols, johnDoe, kristelHeyns, alainVanDenBossche

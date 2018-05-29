@@ -1,6 +1,5 @@
 package be.cheops.exercise.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import java.time.LocalDate;
@@ -10,7 +9,6 @@ import static java.util.Comparator.*;
 @Entity
 public class Employee extends Person implements Comparable<Employee> {
 
-    @Column(nullable = false)
     private LocalDate dateInService;
 
     private LocalDate dateOufOfService;
@@ -52,11 +50,11 @@ public class Employee extends Person implements Comparable<Employee> {
     }
 
     @Override
-    public int compareTo(Employee other) {
+    public int compareTo(Employee o) {
         return comparing(Employee::getDateInService).reversed()
                 .thenComparing(Person::getLastName, nullsLast(naturalOrder()))
                 .thenComparing(Person::getFirstName)
-                .compare(this, other);
+                .compare(this, o);
     }
 
     public static final class Builder {

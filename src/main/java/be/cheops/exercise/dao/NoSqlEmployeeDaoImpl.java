@@ -16,9 +16,4 @@ public class NoSqlEmployeeDaoImpl implements EmployeeDao {
         throw new UnsupportedOperationException();
     }
 
-    @Override
-    public Employee findEmployee(Long id) {
-        throw new UnsupportedOperationException();
-    }
-
 }

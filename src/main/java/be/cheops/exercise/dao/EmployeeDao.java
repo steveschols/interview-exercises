@@ -8,6 +8,4 @@ public interface EmployeeDao {
 
     Employee updateEmployee(Employee employee);
 
-    Employee findEmployee(Long id);
-
 }
