@@ -1,5 +1,6 @@
 package be.cheops.exercise.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import static java.util.Comparator.*;
 @Entity
 public class Employee extends Person implements Comparable<Employee> {
 
+    @Column(nullable = false)
     private LocalDate dateInService;
 
     private LocalDate dateOufOfService;
