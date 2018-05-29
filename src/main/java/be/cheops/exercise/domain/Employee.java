@@ -1,11 +1,13 @@
 package be.cheops.exercise.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.time.LocalDate;
 
 @Entity
 public class Employee extends Person {
 
+    @Column(nullable = false)
     private LocalDate dateInService;
 
     private LocalDate dateOufOfService;

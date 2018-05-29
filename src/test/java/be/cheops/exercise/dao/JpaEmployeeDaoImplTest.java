@@ -20,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-// TODO: Fix tests --> Tip: Entity lifecycle
 public class JpaEmployeeDaoImplTest {
 
     @Autowired
@@ -32,6 +31,7 @@ public class JpaEmployeeDaoImplTest {
 
     @Test
     public void saveEmployee() {
+        // TODO Fix test by modifying the implementation classes --> Tip: Entity lifecycle
         Employee steveSchols = anEmployee()
                 .withFirstName("Steve")
                 .withLastName("Schols")
@@ -45,6 +45,7 @@ public class JpaEmployeeDaoImplTest {
 
     @Test
     public void updateEmployee() {
+        // TODO Fix test by modifying the implementation classes --> Tip: Entity lifecycle
         Employee steveSchols = anEmployee()
                 .withFirstName("Steve")
                 .withLastName("Schols")
